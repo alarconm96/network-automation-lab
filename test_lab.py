@@ -6,8 +6,7 @@ cisco_device={
     'host': 'devnetsandboxiosxec8k.cisco.com',
     'username': 'alarconm96',
     'password': 'J--oMiV6a02RyLHQ',
-    'port': 22,
-    'device_location': 'San Jose, CA'
+    'port': 22
 }
 
 def main():
