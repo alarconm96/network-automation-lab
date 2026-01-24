@@ -4,6 +4,7 @@ net-auto/
 # Ignore local output files
 *.txt
 *.log
+audit_log.txt
 
 # Ignore Python cache
 __pycache__/
