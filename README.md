@@ -13,7 +13,4 @@ This project practices the use of Python and Netmiko to automate configuration a
 4. Run the script: `python test_lab.py`.
 
 ## 📋 Script Output
-The current script connects to a Cisco DevNet Sandbox and executes:
-* `show ip interface brief`
-* `show clock`
-* `show version | include uptime`
+The current script checks devices.txt, connects to each hostname listed, executes `show ip interface brief`, and writes any `administratively down` interfaces into an audit_log.txt file
