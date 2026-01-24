@@ -1,2 +1,1 @@
-sandbox-iosxe-latest-1.cisco.com
-ios-xe-mgmt.cisco.com
+devnetsandboxiosxec8k.cisco.com
