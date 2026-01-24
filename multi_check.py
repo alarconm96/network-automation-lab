@@ -31,14 +31,16 @@ def main():
             with ConnectHandler(**current_device) as net_connect:
                 net_connect.enable()
                 output = net_connect.send_command("show ip interface brief")
-                if "unassigned" in output:
-                    print("⚠️ WARNING: Unassigned interfaces found")
-                else:
-                    print("✅ All interfaces have IP address assigned")
-            
+                with open("audit_log.txt", "a") as log_file:
+                    log_file.write(f"{ip}\n")
+                    for line in output.splitlines()[2:]:
+                        if "administratively down" in line:
+                            output_string = line.split()
+                            log_file.write(f"Interface {output_string[0]} (IP {output_string[1]}) is ADMIN DOWN\n")
+                    log_file.write("-------------------------\n")
         except Exception as e:
             print(f"❌ WARNING: Connection failed wih {ip}: {e}")
-
+        print(f'--- Disconnecting from {ip} ---\n')
 
 if __name__ == "__main__":
     main()
