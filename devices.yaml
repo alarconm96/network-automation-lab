@@ -1,0 +1,10 @@
+---
+devices:
+  - hostname: "cisco-catalyst-8k"
+    address: "devnetsandboxiosxec8k.cisco.com"
+    role: "edge"
+    os: "ios-xe"
+  - hostname: "homelab"
+    address: "192.168.1.2"
+    role: "controller"
+    os: "ubuntu"
