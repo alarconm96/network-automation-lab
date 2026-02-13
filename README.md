@@ -9,8 +9,8 @@ This project practices the use of Python and Netmiko to automate configuration a
 ## 🚀 How to Run
 1. Clone this repository.
 2. Create a virtual environment: `python -m venv net-auto`.
-3. Activate the environment and install dependencies: `pip install netmiko`.
-4. Run the script: `python test_lab.py`.
+3. Activate the environment and install dependencies from requirements file: `pip install -r requirements.txt`.
+4. Run the script: `python3 multi_check.py`.
 
 ## 📋 Script Output
-The current script checks devices.txt, connects to each hostname listed, executes `show ip interface brief`, and writes any `administratively down` interfaces into an audit_log.txt file
+The current script grabs data from a devices YAML file and imports the device dictionaries using net_utils.py. It then connects via SSH using user-provided username and password credentials and runs a hard-coded "show ip interface brief' command on any devices with the 'edge-router' role and prints the output before closing the connection.
