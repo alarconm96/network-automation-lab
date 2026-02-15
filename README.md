@@ -1,7 +1,12 @@
 # Network Automation Practice: Cisco IOS-XE
 This project practices the use of Python and Netmiko to automate configuration and state-checking on Cisco networking equipment.
 
-## 🛠️ Skills Practiced
+## 🛠️ Key Features
+* **Data-Driven Inventory Management** - Externalized device inventory using YAML, enabling the addition or removal of network devices without modifying the core codebase.
+* **Automated Network Device State Checks** - Automation script cycles through devices ingested from YAML devices list and returns output for auditing commands (e.g. cycle through interfaces and notify user of unassigned IP addresses)
+* **Secure Credential Handling** - Implemented secure credential injection using the getpass library to prevent sensitive data exposure in terminal history or source control.
+
+## 🔰 Skills Practiced
 * **Python Automation:** Utilizing the Netmiko library for SSH connectivity.
 * **Version Control:** Managed via Git/GitHub with industry-standard commit conventions.
 * **Environment Management:** Use of Python Virtual Environments (venv) for dependency isolation.
